@@ -6,7 +6,9 @@ require("./database")
 const userRouter=require("./routes/user");
 const bookRouter=require("./routes/book");
 app.use(express.json()); //read only json files
-
+app.get('/',(req,res)=>{
+    res.send('hello')
+})
 app.use("/users", userRouter)
 app.use("/books", bookRouter)
 
