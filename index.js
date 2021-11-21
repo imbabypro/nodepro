@@ -9,6 +9,8 @@ app.use(express.json()); //read only json files
 app.get('/',(req,res)=>{
     res.send('hello')
 })
+
+app.get("/",(req,res)=>{res.send("<h1>heloo</h1>")})
 app.use("/users", userRouter)
 app.use("/books", bookRouter)
 
